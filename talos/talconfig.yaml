@@ -19,10 +19,9 @@ cniConfig:
   name: none
 
 nodes:
-  - hostname: "talos-01"
-    ipAddress: "10.99.0.200"
-    installDiskSelector:
-      serial: "sda"
+  - hostname: "talos01"
+    ipAddress: "10.99.0.100"
+    installDisk: "/dev/sda"
     machineSpec:
       secureboot: false
     talosImageURL: factory.talos.dev/installer/376567988ad370138ad8b2698212367b8edcb69b5fd68c80be1f2ec7d603b4ba
@@ -32,17 +31,16 @@ nodes:
           hardwareAddr: "bc:24:11:34:41:30"
         dhcp: false
         addresses:
-          - "10.99.0.200/24"
+          - "10.99.0.100/24"
         routes:
           - network: "0.0.0.0/0"
             gateway: "10.99.0.1"
         mtu: 1500
         vip:
           ip: "10.99.0.203"
-  - hostname: "talos-02"
-    ipAddress: "10.99.0.201"
-    installDiskSelector:
-      serial: "sda"
+  - hostname: "talos02"
+    ipAddress: "10.99.0.101"
+    installDisk: "/dev/sda"
     machineSpec:
       secureboot: false
     talosImageURL: factory.talos.dev/installer/376567988ad370138ad8b2698212367b8edcb69b5fd68c80be1f2ec7d603b4ba
@@ -52,17 +50,16 @@ nodes:
           hardwareAddr: "bc:24:11:77:05:7a"
         dhcp: false
         addresses:
-          - "10.99.0.201/24"
+          - "10.99.0.101/24"
         routes:
           - network: "0.0.0.0/0"
             gateway: "10.99.0.1"
         mtu: 1500
         vip:
           ip: "10.99.0.203"
-  - hostname: "talos-03"
-    ipAddress: "10.99.0.202"
-    installDiskSelector:
-      serial: "sda"
+  - hostname: "talos03"
+    ipAddress: "10.99.0.102"
+    installDisk: "/dev/sda"
     machineSpec:
       secureboot: false
     talosImageURL: factory.talos.dev/installer/376567988ad370138ad8b2698212367b8edcb69b5fd68c80be1f2ec7d603b4ba
@@ -72,7 +69,7 @@ nodes:
           hardwareAddr: "bc:24:11:e1:75:a9"
         dhcp: false
         addresses:
-          - "10.99.0.202/24"
+          - "10.99.0.102/24"
         routes:
           - network: "0.0.0.0/0"
             gateway: "10.99.0.1"
